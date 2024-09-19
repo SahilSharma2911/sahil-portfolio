@@ -60,7 +60,7 @@ const Contact = () => {
           <h3 className="md:text-2xl leading-[160%]">
             Feel free to either send me an email at{" "}
             <b className="underline">sahilsharmarksh@gmial.com</b> or fill in
-            the form below and I'll get back to you as soon as possible.
+            the form below and I&apos;ll get back to you as soon as possible.
           </h3>
         </motion.div>
 

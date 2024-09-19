@@ -25,7 +25,7 @@ const About = () => {
         B.Tech in Computer Science & Engineering. Driven by a zeal for
         everything technology, I am more than willing to take on new challenges
         and learn wherever I get the chance. With this frame of mind, over time
-        I've cultivated expertise in front-end and back-end technologies,
+        I&apos;ve cultivated expertise in front-end and back-end technologies,
         allowing me to design and build robust, interactive web solutions.
         Well-versed in Hindi and English, I understand the importance of as well
         as possess good communication skills and adaptability according to any
