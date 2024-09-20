@@ -27,9 +27,12 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_0s0dkzs", "template_wl6otpl", form.current, {
-        publicKey: "iPW5m9UNBLsKVf9Jj",
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_API_KEY }
+      )
       .then(
         () => {
           toast.success("Message sent successfully!");
@@ -48,7 +51,7 @@ const Contact = () => {
       <motion.section
         id="contact"
         ref={ref}
-        className="font-dmSans h-screen px-[2rem] md:px-[5rem] xl:px-[10rem] items-center justify-center flex flex-col lg:flex-row gap-7 md:gap-10 text-white"
+        className="font-dmSans py-[4rem] lg:py-0 lg:h-screen px-[2rem] md:px-[5rem] xl:px-[10rem] items-center justify-center flex flex-col lg:flex-row gap-7 md:gap-10 text-white"
         variants={variants}
         initial="initial"
         whileInView="animate"
@@ -66,7 +69,7 @@ const Contact = () => {
 
         <div className="flex flex-col w-full lg:w-1/2 relative">
           <motion.div
-            className="absolute left-[10%] md:left-[20%] lg:left-[15%]"
+            className="absolute left-[4%] sm:left-[15%] md:left-[20%] lg:left-[15%] top-[15%] lg:top-0"
             initial={{ opacity: 1 }}
             whileInView={{ opacity: 0 }}
             transition={{ duration: 1, delay: 2 }}
@@ -118,7 +121,10 @@ const Contact = () => {
               placeholder="Message"
               className="bg-transparent border border-white rounded-md px-3 py-2.5 md:py-2 outline-none w-full"
             />
-            <button className="bg-amber-500 text-black font-bold rounded-md px-3 py-2.5 md:py-3 mt-4 outline-none">
+            <button
+              className="bg-amber-500 text-black font-bold rounded-md px-3 py-2.5 md:py-3 mt-4 outline-none"
+              f
+            >
               Submit
             </button>
           </motion.form>
