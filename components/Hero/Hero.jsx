@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
 const textVariants = {
   initial: {
@@ -68,7 +69,7 @@ const Hero = () => {
         whileHover={{ scale: 1.1 }}
         className="mt-8 md:mt-12 bg-amber-500 font-medium text-[18px] rounded-md px-8 md:px-12 py-2 md:py-3 z-30 text-black"
       >
-        Let&apos;s Chat
+        <Link href={"#contact"}>Let&apos;s Chat</Link>
       </motion.button>
       {/* Sliding text */}
       <div className="absolute bottom-[-120px] w-full overflow-hidden z-20">
