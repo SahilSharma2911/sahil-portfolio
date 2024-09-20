@@ -69,7 +69,7 @@ const Contact = () => {
 
         <div className="flex flex-col w-full lg:w-1/2 relative">
           <motion.div
-            className="absolute left-[8%] sm:left-[15%] md:left-[20%] lg:left-[15%] top-[15%] lg:top-0"
+            className="absolute left-[10%] sm:left-[15%] md:left-[20%] lg:left-[15%] top-[15%] lg:top-0"
             initial={{ opacity: 1 }}
             whileInView={{ opacity: 0 }}
             transition={{ duration: 1, delay: 2 }}
